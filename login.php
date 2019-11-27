@@ -18,7 +18,7 @@
 	$db["name"]= "yse";
 	$db["pass"]= "2019";
 	$db["host"]="localhost";
-	$db["dbname"]="zaiko2019_yse";
+	$db["dbname"]="yse";
 	$errormess="";
 
 /*
