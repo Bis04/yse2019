@@ -7,5 +7,7 @@
 session_start();
 //②セッションを削除する。
 session_destroy();
+header("Location: login.php");
 //③ログイン画面へ遷移する。
+
 ?>

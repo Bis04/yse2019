@@ -30,16 +30,17 @@ if (isset($_POST["decision"])) {
 	 * ③名前とパスワードが両方とも入力されているかを判定する。
 	 * 入力されていた場合はif文の中の処理を行う。
 	 */
-	if (isset($_POST["name"]) and isset($_POST["pass"]) ) {
+	if (@($_POST["name"]) and @($_POST["pass"]) ) {
 		//④名前とパスワードにPOSTで送られてきた名前とパスワードを設定する
 		$name = $_POST["name"];
 		$pass = $_POST["pass"];
 	} else {
 		//⑤名前かパスワードが入力されていない場合は、「名前かパスワードが未入力です」という文言をメッセージを入れる変数に設定する
-	if(!isset($_POST["name"])){
+	if(!@($_POST["name"])){
 	$errormess =$errormess."ユーザ名未入力です。<br>";
 	}
-	if(!isset($_POST["pass"])){
+
+	if(!@($_POST["pass"])){
 	$errormess=$errormess."パスワード未入力です<br>";
 	}
 	}
@@ -47,7 +48,7 @@ if (isset($_POST["decision"])) {
 
 
 //⑦名前が入力されているか判定する。入力されていた場合はif文の中に入る
-if (isset($_POST["name"]) & isset($_POST["pass"])) {
+if (@($_POST["name"]) & @($_POST["pass"])) {
 	//⑧名前に「yse」、パスワードに「2019」と設定されているか確認する。設定されていた場合はif文の中に入る
 	if (($name==$db["name"]) &($pass==$db["pass"])){
 		//⑨SESSIONに名前を設定し、SESSIONの「login」フラグをtrueにする
