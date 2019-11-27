@@ -15,8 +15,8 @@
 	session_start();
 
 //①名前とパスワードを入れる変数を初期化する
-	$db["name"]= "zaiko2019_yse";
-	$db["pass"]= "2019zaiko";
+	$db["name"]= "yse";
+	$db["pass"]= "2019";
 	$db["host"]="localhost";
 	$db["dbname"]="zaiko2019_yse";
 	$errormess="";
