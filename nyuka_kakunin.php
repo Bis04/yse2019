@@ -9,13 +9,22 @@
 */
 
 //①セッションを開始する
-
+session_start(): 
 function getByid($id,$con){
 	/* 
 	 * ②書籍を取得するSQLを作成する実行する。
 	 * その際にWHERE句でメソッドの引数の$idに一致する書籍のみ取得する。
 	 * SQLの実行結果を変数に保存する。
 	 */
+	$sql = "select * from books where books.id=$id ";
+	$result = $con->query($sql);
+		($result->num_rows > 0) {
+				($row = $result->fetch_assoc()){
+							$row;
+
+				}
+		}
+
 
 	//③実行した結果から1レコード取得し、returnで値を返す。
 }
